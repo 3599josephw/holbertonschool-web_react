@@ -1,4 +1,21 @@
+div {
+	margin: 1.5rem;
+}
+
 .Notifications {
-  padding: 20px;
-  border: solid;
+	border: 1px red dashed;
+	padding: 10px;
+	margin: 0;
+}
+
+.Notifications li, p {
+	font-size: 18px;
+}
+
+li[data-priority="default"] {
+	color: blue;
+}
+
+li[data-priority="urgent"] {
+	color: red;
 }

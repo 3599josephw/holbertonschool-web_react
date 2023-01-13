@@ -1,18 +1,18 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry : "./src/index.js",
-  devtool: 'inline-source-map',
-  output : {
-    path: path.resolve(__dirname, "../dist"),
-    filename: "bundle.js"
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, '../dist'),
+    filename: 'bundle.js',
   },
   devServer: {
-    static: path.join(__dirname, '../dist'),
+    static: path.resolve(__dirname, '../dist'),
     hot: true,
     compress: true,
   },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -38,10 +38,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', ['@babel/preset-react', {'runtime': 'automatic'}]],
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         },
       },
     ],
   },
-}
+};

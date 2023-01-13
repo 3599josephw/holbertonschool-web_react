@@ -1,9 +1,3 @@
-import { assert } from 'chai';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Notifications from './Notifications';
-import { shallow } from 'enzyme';
-
 describe('Notifications tests', () => {
   describe('Notifications renders without crashing', () => {
     it('Renders', function() {

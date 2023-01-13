@@ -1,6 +1,5 @@
 import { assert } from 'chai';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import App from './App';
 import { shallow } from 'enzyme';
 
