@@ -13,7 +13,7 @@ div {
 }
 
 li[data-priority="default"] {
-	color: blue;
+	color: #1D0563;
 }
 
 li[data-priority="urgent"] {
