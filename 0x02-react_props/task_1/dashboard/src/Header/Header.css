@@ -1,0 +1,17 @@
+.App-header {
+	display: flex;
+	align-items: center;
+	color: #E0354B;
+	border-bottom: 3px #E0354B solid;
+}
+
+.App-header h1 {
+	font-size: 36px;
+  font-family: 'Arial';
+	display: inline;
+}
+
+.App-header img {
+	width: 200px;
+	height: 200px;
+}
