@@ -2,8 +2,20 @@ import { assert } from 'chai';
 import React from 'react';
 import App from './App';
 import { shallow } from 'enzyme';
+import { StyleSheetTestUtils } from 'aphrodite';
+
 
 describe('App', () => {
+
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
+
+
   it('renders without crashing', () => {
     shallow(<App />);
   });
