@@ -4,7 +4,8 @@ import './CourseList.css';
 
 
 function CourseList() {
-  <table id='CourseList'>
+  return (
+    <table id='CourseList'>
     <thead>
       <CourseListRow textFirstCell='Available courses' isHeader={true} />
       <CourseListRow textFirstCell='Course name' textSecondCell="Credit" isHeader={true} />
@@ -15,6 +16,7 @@ function CourseList() {
       <CourseListRow textFirstCell="React" textSecondCell="40" isHeader={false} />
     </tbody>
   </table>
+  )
 }
 
 export default CourseList;

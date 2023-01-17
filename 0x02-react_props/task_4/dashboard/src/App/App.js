@@ -11,11 +11,11 @@ App.propTypes = {
   isLoggedIn: PropTypes.bool,
 };
 
-CourseListRow.defaultProps = {
+App.defaultProps = {
   isLoggedIn: false,
 };
 
-function App() {
+function App({isLoggedIn}) {
   return (
     <React.Fragment>
       <Notifications />

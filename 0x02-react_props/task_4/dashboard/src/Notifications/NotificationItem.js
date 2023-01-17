@@ -1,4 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+
+NotificationItem.propTypes = {
+  type: PropTypes.string,
+  html: PropTypes.shape({
+    __html: PropTypes.string,
+  }),
+  value: PropTypes.string,
+};
+
+NotificationItem.defaultProps = {
+  type: 'default',
+};
 
 function NotificationItem({type, html, value}) {
   if (!value) {

@@ -1,10 +1,15 @@
-div {
-	margin: 1.5rem;
+.notif-wrapper {
+	display: flex;
+	flex-direction: column;
+	float: right;
+	margin-right: 50px;
 }
+
+
 
 .Notifications {
 	border: 1px red dashed;
-	padding: 10px;
+	padding: 10px 100px 10px 10px;
 	margin: 0;
 }
 

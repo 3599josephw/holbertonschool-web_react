@@ -28,3 +28,15 @@ describe('App', () => {
     expect(wrapper.find('Footer')).toHaveLength(1);
   });
 });
+
+test('check that CourseList is not displayed', () => {
+  const wrapper = shallow(<App />);
+  expect(wrapper.find('Login')).toHaveLength(1);
+  expect(wrapper.find('CourseList')).toHaveLength(0);
+});
+
+test('Login is not included, CourseList is included', () => {
+  const wrapper = shallow(<App isLoggedIn={true} />);
+  expect(wrapper.find('Login')).toHaveLength(0);
+  expect(wrapper.find('CourseList')).toHaveLngth(1);
+});
