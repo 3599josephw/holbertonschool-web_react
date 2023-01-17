@@ -1,0 +1,26 @@
+.notif-wrapper {
+	display: flex;
+	flex-direction: column;
+	float: right;
+	margin-right: 50px;
+}
+
+
+
+.Notifications {
+	border: 1px red dashed;
+	padding: 10px 100px 10px 10px;
+	margin: 0;
+}
+
+.Notifications li, p {
+	font-size: 18px;
+}
+
+li[data-priority="default"] {
+	color: #1D0563;
+}
+
+li[data-priority="urgent"] {
+	color: red;
+}

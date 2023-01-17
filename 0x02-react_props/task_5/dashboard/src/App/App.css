@@ -1,0 +1,24 @@
+.App {
+	margin: 50px;
+}
+
+.App-body {
+	font-size: 18px;
+  font-family: 'Arial';
+}
+
+
+.App-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-top: 3px #E0354B solid;
+
+}
+
+.App-footer p {
+	text-align: center;
+	font-style: italic;
+	font-size: 18px;
+  font-family: 'Arial';
+}
