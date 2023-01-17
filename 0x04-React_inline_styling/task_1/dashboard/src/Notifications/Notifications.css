@@ -1,0 +1,8 @@
+
+li[data-priority="default"] {
+	color: #1D0563;
+}
+
+li[data-priority="urgent"] {
+	color: red;
+}
