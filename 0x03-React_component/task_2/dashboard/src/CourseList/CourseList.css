@@ -1,0 +1,23 @@
+table {
+	margin-left: 50px;
+	border: 1px solid #E7E7E7;
+	width: 100%;
+	text-align: left;
+}
+
+thead {
+	font-weight: bold;
+}
+
+th {
+	border-bottom: 1px solid #E7E7E7;
+	padding: 10px;
+}
+
+thead tr:first-child {
+	text-align: center;
+}
+
+td {
+	padding: 10px;
+}
