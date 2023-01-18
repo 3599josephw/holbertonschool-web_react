@@ -18,7 +18,7 @@ describe('CourseListRow tests', () => {
   });
 
   it('tests when isHeader is false', () => {
-    const wrapper = shallow(<NotificationItem type="default" value="notHeader" />);
+    const wrapper = shallow(<CourseListRow type="default" value="notHeader" />);
     expect(wrapper.props().dataPriority === 'default');
     expect(wrapper.props().dataValue === 'notHeader');
   });

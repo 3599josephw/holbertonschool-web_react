@@ -2,9 +2,18 @@ import React from 'react';
 import Notifications from './Notifications';
 import { shallow } from 'enzyme';
 import { assert } from 'chai';
+import { StyleSheetTestUtils } from 'aphrodite';
 
 
 describe('Notifications tests', () => {
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
+
   describe('Notifications renders without crashing', () => {
     it('Renders', function() {
       shallow(<Notifications />);

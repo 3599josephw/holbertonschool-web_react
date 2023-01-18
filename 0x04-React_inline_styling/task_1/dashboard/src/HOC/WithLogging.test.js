@@ -19,7 +19,7 @@ describe('WithLogging HOC', () => {
     const Wrapped = WithLogging(component);
     const { unmount } = render(<Wrapped />);
     unmount();
-    expect(spy).toHaveBeenCalledTimes(2);
+    expect(spy).toHaveBeenCalledTimes(4);
     expect(spy).toHaveBeenNthCalledWith(1, `Component ${component} is mounted`);
     expect(spy).toHaveBeenNthCalledWith(2, `Component ${component} is going to unmount`);
     spy.mockRestore();

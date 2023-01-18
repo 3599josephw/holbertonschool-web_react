@@ -1,9 +1,18 @@
 import React from 'react';
 import CourseList from './CourseList';
 import { shallow } from 'enzyme';
+import { StyleSheetTestUtils } from 'aphrodite';
 
 
 describe('CourseList tests', () => {
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
+
   it('renders CourseList component without crashing', () => {
     shallow(<CourseList />);
   });

@@ -10,13 +10,21 @@ const NotifCSS = StyleSheet.create({
   notifWrapper: {
     display: 'flex',
     flexDirection: 'column',
-    float: 'right',
-    marginRight: '50px',
+    fontSize: '20px',
+    '@media (min-width: 900px)': {
+      float: 'right',
+      marginRight: '50px',
+    }
   },
   Notifications: {
     border: '1px red dashed',
     padding: '10px 100px 10px 10px',
     margin: '0',
+  },
+  menuItem: {
+    '@media (max-width: 900px)': {
+      height: '100%',
+    },
   }
 })
 
@@ -43,7 +51,7 @@ class Notifications extends Component {
     const { displayDrawer, listNotifications } = this.props;
     return (
       <div className={css(NotifCSS.notifWrapper)}>
-        <div className="menuItem">
+        <div className={css(NotifCSS.menuItem)}>
           <p>Your notifications</p>
         </div>
         {displayDrawer && (
