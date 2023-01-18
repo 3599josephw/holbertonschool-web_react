@@ -3,8 +3,18 @@ import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import BodySection from './BodySection';
 import BodySectionWithMarginBottom from './BodySectionWithMarginBottom';
+import { StyleSheetTestUtils } from 'aphrodite';
+
 
 describe('BodySectionWithMarginBottom', () => {
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
+
   it('BodySectionWithMarginBottom renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<BodySectionWithMarginBottom title="test title" />, div);
