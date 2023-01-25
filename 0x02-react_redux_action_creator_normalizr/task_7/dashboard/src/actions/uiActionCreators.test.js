@@ -1,4 +1,9 @@
-import { login, logout, displayNotificationDrawer, hideNotificationDrawer } from './uiActionCreators';
+import { login, logout, displayNotificationDrawer, hideNotificationDrawer,
+  loginSuccess, loginFailure, loginRequest, } from './uiActionCreators';
+import fetchMock from 'jest-fetch-mock';
+
+
+fetchMock.enableMocks();
 
 describe('uiActionCreators', () => {
   it('login returns correctly', () => {
@@ -27,5 +32,18 @@ describe('uiActionCreators', () => {
     expect(hideNotificationDrawer('test', 'test')).toEqual({
       type: 'HIDE_NOTIFICATION_DRAWER',
     });
+  });
+
+  it('loginRequest returns correctly', async () => {
+    fetch.mockResponseOnce('tests');
+    const response = await loginRequest('test', 'test')
+    expect(response).toEqual({ type: 'LOGIN_SUCCESS' });
+    expect(fetch).toHaveBeenCalledTimes(1);
+  });
+
+  it('loginRequest returns correctly', async () => {
+    const response = await loginRequest('test', 'test')
+    expect(response).toEqual({ type: 'LOGIN_FAILURE' });
+    expect(fetch).toHaveBeenCalledTimes(2);
   });
 });

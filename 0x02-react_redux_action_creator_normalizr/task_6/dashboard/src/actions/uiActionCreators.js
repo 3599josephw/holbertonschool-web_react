@@ -1,4 +1,6 @@
 import { LOGIN, LOGOUT, DISPLAY_NOTIFICATION_DRAWER, HIDE_NOTIFICATION_DRAWER } from './uiActionTypes';
+import { bindActionCreators } from 'redux';
+
 
 export function login(email, password) {
   return {
